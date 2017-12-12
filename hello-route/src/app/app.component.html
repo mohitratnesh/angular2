@@ -1,0 +1,38 @@
+
+
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <p>
+    {{title1}}
+  </p>
+ 
+</div>
+<h2>Friends: </h2>
+<ul>
+  <li *ngFor="let friend of friends; let i = index">
+       {{i + '. ' + friend}}
+  </li>
+ 
+</ul>
+<!--
+<p *ngIf="printMe; else templateTest"><b>I can print myself</b></p>
+<ng-template #templateTest><b>Template One</b></ng-template>
+-->
+<br>
+<p *ngIf="printMe2; then templateOne else templateTwo"><b>I can print myself</b></p>
+<ng-template #templateOne><b>Template One</b></ng-template>
+<ng-template #templateTwo><b>Template Two</b></ng-template>
+<br>
+
+<a routerLink="/mycategorypath">Category</a>
+<a routerLink="/myproductpath">Product</a>
+
+<router-outlet></router-outlet>
+
+<br>
+<br>
+<br>
+
