@@ -1,0 +1,16 @@
+.mytaskinput{
+
+    width:500px;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid grey;
+    margin-top: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+
+}
+
+h1 {
+    text-align: center;
+    background-color: #ff77dd;
+    padding:20px;
+}

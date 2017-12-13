@@ -1,0 +1,15 @@
+<div class="mytaskinput">
+  <h1>Task List</h1>
+  <div class="">
+    <input [(ngModel)] ="newTask" placeholder="Add Task" class=""  /> 
+    <button (click)="addTask()">Add Task</button>
+  </div>
+  <ul>
+    <li *ngFor="let t of tasks; let i = index">
+      {{t | uppercase }}     
+     <span (click)="removeTask(i)">&nbsp;&nbsp;&nbsp;&nbsp;x</span>
+    </li>
+
+  </ul>
+
+</div>

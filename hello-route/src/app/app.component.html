@@ -13,10 +13,14 @@
 <h2>Friends: </h2>
 <ul>
   <li *ngFor="let friend of friends; let i = index">
-       {{i + '. ' + friend}}
+       {{i + '. ' + friend | uppercase}}
   </li>
  
 </ul>
+Date: {{ myDate | date:'fullDate' | uppercase }}
+<br>
+Array: {{ myNumber | sortnumber:'asc' }}
+
 <!--
 <p *ngIf="printMe; else templateTest"><b>I can print myself</b></p>
 <ng-template #templateTest><b>Template One</b></ng-template>
@@ -29,6 +33,7 @@
 
 <a routerLink="/mycategorypath">Category</a>
 <a routerLink="/myproductpath">Product</a>
+<a routerLink="/addtask">Task</a>
 
 <router-outlet></router-outlet>
 
