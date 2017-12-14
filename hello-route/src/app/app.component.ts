@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataServiceService } from  './data-service.service';
 
 @Component({
   selector: 'app-root',
@@ -14,4 +15,16 @@ export class AppComponent {
   myDate = new Date();
 
   myNumber = [34, 65, 76, 87, 12];
+
+
+  constructor(private myService: DataServiceService){
+
+    console.log(this.myService.callSuccess());
+    console.log(this.myService.person.name);
+    this.myService.person.name = "Pradeep;"
+  }
+
+
+
+
 }
