@@ -10,8 +10,9 @@ import { DataServiceService } from '../data-service.service';
 export class TemplateFormComponent implements OnInit {
 
   constructor(private myService: DataServiceService) {
-
+    
       console.log(this.myService.person.name);
+      this.myService.person.name = "RK;"
 
    }
 
@@ -28,6 +29,7 @@ export class TemplateFormComponent implements OnInit {
   }
 
   onFormSubmit = function(myUser){
+    debugger;
     console.log(myUser.sayGender);
   }
 

@@ -17,11 +17,17 @@ export class AppComponent {
   myNumber = [34, 65, 76, 87, 12];
 
 
-  constructor(private myService: DataServiceService){
+  constructor(private consumeService: DataServiceService){
+    //debugger; //debug here!
+    //console.log(this.myService.callSuccess());
+    //console.log(this.myService.person.name);
+    console.log(this.consumeService.callSuccess());
+    console.log(this.consumeService.person.name);
+    
+    this.consumeService.person.name = "Pradeep;"
+    console.log("____________________________");
+   
 
-    console.log(this.myService.callSuccess());
-    console.log(this.myService.person.name);
-    this.myService.person.name = "Pradeep;"
   }
 
 

@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "hello-route"
+    "name": "compiler-angular"
   },
   "apps": [
     {
@@ -9,8 +9,7 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico",
-        "data"
+        "favicon.ico"
       ],
       "index": "index.html",
       "main": "main.ts",

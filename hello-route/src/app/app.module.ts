@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppComponent } from './app.component';
@@ -15,6 +17,8 @@ import { RealtimeformComponent } from './realtimeform/realtimeform.component';
 import { SortNumberPipe } from './app.sortNumberPipe';
 import { ModelFormComponent } from './model-form/model-form.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
+import { HttpServiceComponent } from './http-service/http-service.component';
+import { AnimationComponent } from './animation/animation.component';
 
 
 @NgModule({
@@ -26,12 +30,17 @@ import { TemplateFormComponent } from './template-form/template-form.component';
     RealtimeformComponent,
     SortNumberPipe,
     ModelFormComponent,
-    TemplateFormComponent
+    TemplateFormComponent,
+    HttpServiceComponent,
+    AnimationComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule,
+
     RouterModule.forRoot(
       [
         {
@@ -53,6 +62,14 @@ import { TemplateFormComponent } from './template-form/template-form.component';
         {
           path:"templateform",
           component:TemplateFormComponent 
+        },
+        {
+          path:"httpservice",
+          component:HttpServiceComponent 
+        },
+        {
+          path:"animation",
+          component:AnimationComponent 
         }
     ]
   )
